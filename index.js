@@ -64,7 +64,7 @@
     var reqOpts = {
       url: baseUri.replace(/\/$/, '') + path,
       method: method,
-      headers: extend({}, options.headers),
+      headers: extend({}, client.options.headers, options.headers),
       body: reqBody,
       query: typeof reqQuery === 'object' ? extend({}, reqQuery) : reqQuery
     };
